@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Homebro.Views.ThirdPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Homebro.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Homebro.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:ThirdPageViewModel />
+    </Page.DataContext>
+
+    <Grid Background="#FFADCB2B">
+        <!-- Background -->
+        <Image Source="..\Assets\poison_ivy.jpg"
+               Stretch="Uniform"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Right"
+               Margin="16 16 16 0" />
+        <StackPanel>
+
+            <TextBlock Text="Third Page"
+                       FontSize="54"
+                       FontWeight="Light"
+                       Foreground="White"
+                       Margin="158 0 0 0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+            <TextBlock Text="{Binding Message}"
+                       FontSize="54"
+                       FontWeight="Light"
+                       Foreground="PapayaWhip"
+                       Margin="158 88 0 0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Bottom" />
+        </StackPanel>
+    </Grid>
+</Page>
+
