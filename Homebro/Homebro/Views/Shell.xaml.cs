@@ -37,6 +37,7 @@ namespace Homebro
                 if (menuItem.IsNavigation)
                 {
                     SplitViewFrame.Navigate(menuItem.NavigationDestination);
+                    MySplitView.IsPaneOpen = false;
                 }
                 else
                 {

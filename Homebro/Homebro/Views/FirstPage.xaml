@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FF01AEF0">
+    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}">
         <!-- Background -->
         <Image Source="..\Assets\harley_quinn.jpg"
                Stretch="Uniform"
@@ -15,14 +15,17 @@
                HorizontalAlignment="Right"
                Margin="16" />
         <StackPanel>
-
-            <TextBlock Text="First Page"
+            <TextBlock
                        FontSize="54"
                        FontWeight="Light"
                        Foreground="White"
                        HorizontalAlignment="Left"
-                       Margin="158 0 0 0"
-                       VerticalAlignment="Center" />
+                       Margin="190,0,0,0"
+                       VerticalAlignment="Center" Height="77" >
+                <Run Text="Licht"/>
+                <LineBreak/>
+                <Run/>
+            </TextBlock>
         </StackPanel>
     </Grid>
 </Page>
