@@ -8,33 +8,16 @@
     xmlns:vm="using:Homebro.ViewModels"
     mc:Ignorable="d">
 
-    <Page.DataContext>
-        <vm:ThirdPageViewModel />
-    </Page.DataContext>
-
-    <Grid Background="#FFADCB2B">
-        <!-- Background -->
-        <Image Source="..\Assets\poison_ivy.jpg"
-               Stretch="Uniform"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Right"
-               Margin="16 16 16 0" />
+    <Grid Background="#FF1E1E1E">
         <StackPanel>
-
-            <TextBlock Text="Third Page"
+            <TextBlock
                        FontSize="54"
                        FontWeight="Light"
                        Foreground="White"
-                       Margin="158 0 0 0"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" />
-            <TextBlock Text="{Binding Message}"
-                       FontSize="54"
-                       FontWeight="Light"
-                       Foreground="PapayaWhip"
-                       Margin="158 88 0 0"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Bottom" />
+                       Margin="80,30,0,0"
+                       VerticalAlignment="Center" Height="77" Text="Einstellungen" />
+
         </StackPanel>
     </Grid>
 </Page>

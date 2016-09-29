@@ -5,28 +5,21 @@
     xmlns:local="using:Homebro.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="#FFCEA1F2">
+    mc:Ignorable="d">
 
     <!-- In this page, the background color is set at page level, not in the main grid. -->
     <!-- The SplitView in Compact* mode does not pick up that color - in my current setup. -->
 
-    <Grid>
-        <!-- Background -->
-        <Image Source="..\Assets\catwoman.jpg"
-               Stretch="Uniform"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Right"
-               Margin="16" />
+    <Grid Background="#FF1E1E1E">
         <StackPanel>
-
-            <TextBlock Text="Second Page"
+            <TextBlock
                        FontSize="54"
                        FontWeight="Light"
                        Foreground="White"
-                       Margin="158 0 0 0"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" />
+                       Margin="80,30,0,0"
+                       VerticalAlignment="Center" Height="77" Text="Sensoren" />
+
         </StackPanel>
     </Grid>
 </Page>

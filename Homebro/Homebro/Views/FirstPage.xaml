@@ -7,25 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}">
-        <!-- Background -->
-        <Image Source="..\Assets\harley_quinn.jpg"
-               Stretch="Uniform"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Right"
-               Margin="16" />
+    <Grid Background="#FF1E1E1E">
         <StackPanel>
             <TextBlock
                        FontSize="54"
                        FontWeight="Light"
                        Foreground="White"
                        HorizontalAlignment="Left"
-                       Margin="190,0,0,0"
-                       VerticalAlignment="Center" Height="77" >
-                <Run Text="Licht"/>
-                <LineBreak/>
-                <Run/>
-            </TextBlock>
+                       Margin="80,30,0,0"
+                       VerticalAlignment="Center" Height="77" Text="Beleuchtung" />
+
         </StackPanel>
     </Grid>
 </Page>
