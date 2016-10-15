@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="Homebro.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Homebro.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF1E1E1E">
+        <StackPanel>
+            <TextBlock
+                FontSize="54"
+                FontWeight="Light"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                Margin="80,30,0,0"
+                VerticalAlignment="Center"
+                Height="77"
+                Text="Login" />
+            <TextBlock 
+                FontSize="18"
+                FontWeight="Light"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                Margin="50,40,0,0"
+                VerticalAlignment="Center"
+                Height="24"
+                Text="Benutzername"/>
+            <TextBox
+                x:Name="txt_username"
+                TextWrapping="Wrap"
+                Text="Benutzer" HorizontalAlignment="Left" Margin="80,20,0,0" Width="150" BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}">
+                <TextBox.Foreground>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </TextBox.Foreground>
+                <TextBox.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemChromeBlackMediumLowColor}"/>
+                </TextBox.Background>
+            </TextBox>
+            <TextBlock 
+                FontSize="18"
+                FontWeight="Light"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                Margin="50,30,0,0"
+                VerticalAlignment="Center"
+                Height="24"
+                Text="Passwort"/>
+            <PasswordBox 
+                x:Name="txt_password"
+                HorizontalAlignment="Left" Margin="80,20,0,0" Width="150" BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}">
+                <PasswordBox.Foreground>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </PasswordBox.Foreground>
+                <PasswordBox.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemChromeBlackMediumLowColor}"/>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <Button x:Name="btn_login" Content="Login" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="179,20,0,0" FontSize="18" FontWeight="Bold" Click="btn_login_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemChromeBlackMediumLowColor}"/>
+                </Button.Background>
+                <Button.Foreground>
+                    <SolidColorBrush Color="{ThemeResource SystemAltMediumLowColor}"/>
+                </Button.Foreground>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -14,7 +14,7 @@ namespace Homebro.ViewModels
         public ShellViewModel()
         {
             // Build the menu
-            Menu.Add(new MenuItem() { Glyph = "", Text = "Beleuchtung", NavigationDestination = typeof(FirstPage) });
+            Menu.Add(new MenuItem() { Glyph = "", Text = "Beleuchtung", NavigationDestination = typeof(LoginPage) });
             Menu.Add(new MenuItem() { Glyph = "", Text = "Sensoren", NavigationDestination = typeof(SecondPage) });
             Menu.Add(new MenuItem() { Glyph = "", Text = "Einstellungen", NavigationDestination = typeof(ThirdPage) });
         }
