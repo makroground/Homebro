@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace Homebro
 {
@@ -14,24 +15,33 @@ namespace Homebro
 
         }
 
-        static string server = "h2550032.stratoserver.net";
-        static string database = "homebro";
+        static string server = "85.214.232.234";
+        static string database = "rb_homebro";
         static string user = "root";
         static string pswd = "rgEntwicklung2016";
 
-        public static bool login()
+        public static bool login(string username, string password_hash)
         {
             string connectionString = "Server = " + server + ";database = " + database + ";uid = " + user + ";password = " + pswd + ";SslMode=None;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                MySqlCommand checkLogin = new MySqlCommand("SELECT firstname FROM db_user WHERE IDX = \"" + 1 + "\"", connection);
+                MySqlCommand checkLogin = new MySqlCommand("SELECT Password FROM users WHERE Username = \"" + username + "\";", connection);
                 using (MySqlDataReader reader = checkLogin.ExecuteReader())
                 {
                     reader.Read();
-                    string name = reader.GetString("firstname");
+                    string password;
+                    try
+                    {
+                        password = reader.GetString("Password");
+                    } catch (MySqlException)
+                    {
+                        password = null;
+                        Debug.Write("Login: Bei der Abfrage an der Datenbank ist ein Fehler aufgetreten.");
+                    }
 
-                    if (name.Equals("Test"))
+                    connection.Close();
+                    if (password != null && password.Equals(password_hash))
                         return true;
                     else
                         return false;
